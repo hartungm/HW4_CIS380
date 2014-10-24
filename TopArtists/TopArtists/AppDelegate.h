@@ -11,7 +11,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, readonly) int networkActivityCounter;
+- (void) incrementNetworkCounter;
+- (void) decrementNetworkCounter;
+- (void) resetNetworkCounter;
 
 @end
 
