@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "HttpCommunication.h"
 #import "ArtistTableViewCell.h"
+#import "UIImageView+Network.h"
 
 @interface MasterViewController ()
 
@@ -74,6 +75,16 @@
 	NSDictionary *artist = self.objects[indexPath.row];
 	cell.artistLabel.text = artist[@"name"];
 	cell.artistListeners.text = [@"Listeners: " stringByAppendingString:artist[@"listeners"]];
+	NSDictionary *image = artist[@"image"][2];
+	NSString *imageURL = image[@"#text"];
+	if(imageURL != nil)
+	{
+		[cell.artistImage loadImageFromURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"Last_fm_logo.png"] cachingKey:imageURL];
+	}
+	else
+	{
+		cell.artistImage.image = [UIImage imageNamed:@"Last_fm_logo.png"];
+	}
 	return cell;
 }
 

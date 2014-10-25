@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CBB79CC19FC2D7700687AB9 /* FTWCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB79C819FC2D7700687AB9 /* FTWCache.m */; };
+		4CBB79CD19FC2D7700687AB9 /* Last_fm_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB79C919FC2D7700687AB9 /* Last_fm_logo.png */; };
+		4CBB79CE19FC2D7700687AB9 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB79CB19FC2D7700687AB9 /* UIImageView+Network.m */; };
 		4CE6CFD019F57156009DC6D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFCF19F57156009DC6D5 /* main.m */; };
 		4CE6CFD319F57156009DC6D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFD219F57156009DC6D5 /* AppDelegate.m */; };
 		4CE6CFD619F57156009DC6D5 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFD519F57156009DC6D5 /* MasterViewController.m */; };
@@ -30,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CBB79C719FC2D7700687AB9 /* FTWCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWCache.h; sourceTree = "<group>"; };
+		4CBB79C819FC2D7700687AB9 /* FTWCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWCache.m; sourceTree = "<group>"; };
+		4CBB79C919FC2D7700687AB9 /* Last_fm_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Last_fm_logo.png; sourceTree = "<group>"; };
+		4CBB79CA19FC2D7700687AB9 /* UIImageView+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
+		4CBB79CB19FC2D7700687AB9 /* UIImageView+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
 		4CE6CFCA19F57156009DC6D5 /* TopArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE6CFCE19F57156009DC6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE6CFCF19F57156009DC6D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +119,11 @@
 		4CE6CFCD19F57156009DC6D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4CBB79C719FC2D7700687AB9 /* FTWCache.h */,
+				4CBB79C819FC2D7700687AB9 /* FTWCache.m */,
+				4CBB79C919FC2D7700687AB9 /* Last_fm_logo.png */,
+				4CBB79CA19FC2D7700687AB9 /* UIImageView+Network.h */,
+				4CBB79CB19FC2D7700687AB9 /* UIImageView+Network.m */,
 				4CE6CFCE19F57156009DC6D5 /* Info.plist */,
 				4CE6CFCF19F57156009DC6D5 /* main.m */,
 			);
@@ -215,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE6CFDC19F57156009DC6D5 /* Main.storyboard in Resources */,
+				4CBB79CD19FC2D7700687AB9 /* Last_fm_logo.png in Resources */,
 				4CE6CFE119F57156009DC6D5 /* LaunchScreen.xib in Resources */,
 				4CE6CFDE19F57156009DC6D5 /* Images.xcassets in Resources */,
 			);
@@ -235,11 +249,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE6CFD319F57156009DC6D5 /* AppDelegate.m in Sources */,
+				4CBB79CE19FC2D7700687AB9 /* UIImageView+Network.m in Sources */,
 				4CE6CFD619F57156009DC6D5 /* MasterViewController.m in Sources */,
 				4CF0C60719F815C500DDFC95 /* ArtistTableViewCell.m in Sources */,
 				4CE6CFD019F57156009DC6D5 /* main.m in Sources */,
 				4CE6CFF819F573CC009DC6D5 /* HttpCommunication.m in Sources */,
 				4CE6CFD919F57156009DC6D5 /* DetailViewController.m in Sources */,
+				4CBB79CC19FC2D7700687AB9 /* FTWCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
