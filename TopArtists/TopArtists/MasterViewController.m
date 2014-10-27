@@ -52,10 +52,10 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	if ([[segue identifier] isEqualToString:@"showDetail"]) {
+	if ([[segue identifier] isEqualToString:@"toArtist"]) {
 	    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-	    NSDate *object = self.objects[indexPath.row];
-	    [[segue destinationViewController] setDetailItem:object];
+	    NSDictionary *object = self.objects[indexPath.row];
+		[[segue destinationViewController] setDetailItem:object];
 	}
 }
 
