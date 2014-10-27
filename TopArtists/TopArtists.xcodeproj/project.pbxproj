@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C368FAA19FDE5BA00E613CF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C368FA919FDE5BA00E613CF /* WebViewController.m */; };
 		4CBB79CC19FC2D7700687AB9 /* FTWCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB79C819FC2D7700687AB9 /* FTWCache.m */; };
 		4CBB79CD19FC2D7700687AB9 /* Last_fm_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB79C919FC2D7700687AB9 /* Last_fm_logo.png */; };
 		4CBB79CE19FC2D7700687AB9 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB79CB19FC2D7700687AB9 /* UIImageView+Network.m */; };
 		4CE6CFD019F57156009DC6D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFCF19F57156009DC6D5 /* main.m */; };
 		4CE6CFD319F57156009DC6D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFD219F57156009DC6D5 /* AppDelegate.m */; };
 		4CE6CFD619F57156009DC6D5 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFD519F57156009DC6D5 /* MasterViewController.m */; };
+		4CE6CFD919F57156009DC6D5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6CFD819F57156009DC6D5 /* DetailViewController.m */; };
 		4CE6CFDC19F57156009DC6D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6CFDA19F57156009DC6D5 /* Main.storyboard */; };
 		4CE6CFDE19F57156009DC6D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6CFDD19F57156009DC6D5 /* Images.xcassets */; };
 		4CE6CFE119F57156009DC6D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6CFDF19F57156009DC6D5 /* LaunchScreen.xib */; };
@@ -33,8 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C368FA819FDE5BA00E613CF /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
-		4C368FA919FDE5BA00E613CF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		4CBB79C719FC2D7700687AB9 /* FTWCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWCache.h; sourceTree = "<group>"; };
 		4CBB79C819FC2D7700687AB9 /* FTWCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWCache.m; sourceTree = "<group>"; };
 		4CBB79C919FC2D7700687AB9 /* Last_fm_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Last_fm_logo.png; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		4CE6CFD219F57156009DC6D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4CE6CFD419F57156009DC6D5 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		4CE6CFD519F57156009DC6D5 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		4CE6CFD719F57156009DC6D5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4CE6CFD819F57156009DC6D5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		4CE6CFDB19F57156009DC6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CE6CFDD19F57156009DC6D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CE6CFE019F57156009DC6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -98,14 +98,14 @@
 		4CE6CFCC19F57156009DC6D5 /* TopArtists */ = {
 			isa = PBXGroup;
 			children = (
-				4C368FA819FDE5BA00E613CF /* WebViewController.h */,
-				4C368FA919FDE5BA00E613CF /* WebViewController.m */,
 				4CF0C60519F815C500DDFC95 /* ArtistTableViewCell.h */,
 				4CF0C60619F815C500DDFC95 /* ArtistTableViewCell.m */,
 				4CE6CFD119F57156009DC6D5 /* AppDelegate.h */,
 				4CE6CFD219F57156009DC6D5 /* AppDelegate.m */,
 				4CE6CFD419F57156009DC6D5 /* MasterViewController.h */,
 				4CE6CFD519F57156009DC6D5 /* MasterViewController.m */,
+				4CE6CFD719F57156009DC6D5 /* DetailViewController.h */,
+				4CE6CFD819F57156009DC6D5 /* DetailViewController.m */,
 				4CE6CFDA19F57156009DC6D5 /* Main.storyboard */,
 				4CE6CFF619F573CC009DC6D5 /* HttpCommunication.h */,
 				4CE6CFF719F573CC009DC6D5 /* HttpCommunication.m */,
@@ -251,10 +251,10 @@
 				4CE6CFD319F57156009DC6D5 /* AppDelegate.m in Sources */,
 				4CBB79CE19FC2D7700687AB9 /* UIImageView+Network.m in Sources */,
 				4CE6CFD619F57156009DC6D5 /* MasterViewController.m in Sources */,
-				4C368FAA19FDE5BA00E613CF /* WebViewController.m in Sources */,
 				4CF0C60719F815C500DDFC95 /* ArtistTableViewCell.m in Sources */,
 				4CE6CFD019F57156009DC6D5 /* main.m in Sources */,
 				4CE6CFF819F573CC009DC6D5 /* HttpCommunication.m in Sources */,
+				4CE6CFD919F57156009DC6D5 /* DetailViewController.m in Sources */,
 				4CBB79CC19FC2D7700687AB9 /* FTWCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
