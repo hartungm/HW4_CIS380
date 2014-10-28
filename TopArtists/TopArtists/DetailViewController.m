@@ -7,9 +7,9 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController ()
-@property (strong, nonatomic) UIActivityIndicatorView *webCounter;
 @end
 
 @implementation DetailViewController
@@ -32,6 +32,7 @@
 	{
 		NSString *earlString = self.detailItem[@"url"];
 		NSString *mobileString = [earlString stringByReplacingOccurrencesOfString:@"www.last.fm" withString:@"m.last.fm"];
+		self.artistURL = mobileString;
 		NSURL *earl = [NSURL URLWithString:mobileString];
 		NSURLRequest *request = [NSURLRequest requestWithURL:earl];
 		self.webView.delegate = self;
@@ -39,22 +40,11 @@
 	}
 }
 
--(UIActivityIndicatorView *) webActivityIndicator
-{
-	if(!self.webCounter)
-	{
-		self.webCounter = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-		self.webCounter.hidesWhenStopped = YES;
-	}
-	return self.webCounter;
-}
-
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	UIBarButtonItem *activity = [[UIBarButtonItem alloc] initWithCustomView:self.webCounter];
 	UIBarButtonItem *safari = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(viewInSafari)];
-	self.navigationItem.rightBarButtonItems = @[safari, activity];
+	self.navigationItem.rightBarButtonItems = @[safari];
 	[self configureView];
 }
 
@@ -87,9 +77,9 @@
 -(void)viewInSafari
 {
 	NSURL *earl = [NSURL URLWithString: self.artistURL];
-	if(![[UIApplication sharedApplication] openURL:earl]);
+	if(![[UIApplication sharedApplication] openURL:earl]) // Having Issues passing current URL to Safari
 	{
-		// TODO: Log a message.
+		NSLog(@"Issue Opening URL!");
 	}
 }
 
@@ -100,18 +90,18 @@
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
-	[self.webCounter startAnimating];
+	[(AppDelegate *) [[UIApplication sharedApplication] delegate] incrementNetworkCounter];
 	[self updateBackButton];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-	[self.webCounter stopAnimating];
+	[(AppDelegate *) [[UIApplication sharedApplication] delegate] decrementNetworkCounter];
 	[self updateBackButton];
 }
 
 -(void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-	[self.webCounter stopAnimating];
+	[(AppDelegate *) [[UIApplication sharedApplication] delegate] decrementNetworkCounter];
 }
 @end
