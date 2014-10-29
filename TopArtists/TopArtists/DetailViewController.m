@@ -76,8 +76,8 @@
 
 -(void)viewInSafari
 {
-	NSURL *earl = [NSURL URLWithString: self.artistURL];
-	if(![[UIApplication sharedApplication] openURL:earl]) // Having Issues passing current URL to Safari
+	NSURL *earl = self.webView.request.URL;
+	if(![[UIApplication sharedApplication] openURL:earl])
 	{
 		NSLog(@"Issue Opening URL!");
 	}
