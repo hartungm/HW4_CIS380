@@ -2,7 +2,7 @@
 //  ArtistTableViewCell.m
 //  TopArtists
 //
-//  Created by Michael Hartung on 10/22/14.
+//  Created by Michael Hartung and Matt Armand on 10/22/14.
 //  Copyright (c) 2014 hartung-michael. All rights reserved.
 //
 
